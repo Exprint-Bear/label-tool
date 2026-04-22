@@ -6,40 +6,34 @@
     <title>熊愛印標籤字體預視系統</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
     <style>
-        @font-face {
-            font-family: 'BearFont';
-            src: url('01.ttf') format('truetype');
-            src: url('02.ttf') format('truetype');
-            src: url('03.ttf') format('truetype');
-            src: url('04.ttf') format('truetype');
-            src: url('05.ttf') format('truetype');
-            src: url('06.ttf') format('truetype');
-            src: url('07.ttf') format('truetype');
-            src: url('08.ttf') format('truetype');
-            src: url('09.ttf') format('truetype');
-            src: url('10.ttf') format('truetype');
-            src: url('11.ttf') format('truetype');
-            src: url('12.ttf') format('truetype');
-            src: url('13.ttf') format('truetype');
-            src: url('14.ttf') format('truetype');
-            src: url('15.ttf') format('truetype');
-            src: url('16.ttf') format('truetype');
-            src: url('17.ttf') format('truetype');
-            src: url('18.ttf') format('truetype');
-            src: url('19.ttf') format('truetype');
-            src: url('20.ttf') format('truetype');
-            src: url('21.ttf') format('truetype');
-            src: url('22.ttf') format('truetype');
-            src: url('23.ttf') format('truetype');
-            src: url('24.ttf') format('truetype');
-            src: url('25.ttf') format('truetype');
-            src: url('26.ttf') format('truetype');
-            src: url('27.ttf') format('truetype');
-            src: url('28.ttf') format('truetype');
-            src: url('29.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
+        /* 字體定義區塊 - 確保與檔案名稱對應 */
+        @font-face { font-family: '01'; src: url('01.ttf') format('truetype'); }
+        @font-face { font-family: '02'; src: url('02.ttf') format('truetype'); }
+        @font-face { font-family: '03'; src: url('03.ttf') format('truetype'); }
+        @font-face { font-family: '04'; src: url('04.ttf') format('truetype'); }
+        @font-face { font-family: '05'; src: url('05.ttf') format('truetype'); }
+        @font-face { font-family: '06'; src: url('06.ttf') format('truetype'); }
+        @font-face { font-family: '07'; src: url('07.ttf') format('truetype'); }
+        @font-face { font-family: '08'; src: url('08.ttf') format('truetype'); }
+        @font-face { font-family: '09'; src: url('09.ttf') format('truetype'); }
+        @font-face { font-family: '10'; src: url('10.ttf') format('truetype'); }
+        @font-face { font-family: '11'; src: url('11.ttf') format('truetype'); }
+        @font-face { font-family: '12'; src: url('12.ttf') format('truetype'); }
+        @font-face { font-family: '13'; src: url('13.ttf') format('truetype'); }
+        @font-face { font-family: '14'; src: url('14.ttf') format('truetype'); }
+        @font-face { font-family: '15'; src: url('15.ttf') format('truetype'); }
+        @font-face { font-family: '16'; src: url('16.ttf') format('truetype'); }
+        @font-face { font-family: '17'; src: url('17.ttf') format('truetype'); }
+        @font-face { font-family: '18'; src: url('18.ttf') format('truetype'); }
+        @font-face { font-family: '19'; src: url('19.ttf') format('truetype'); }
+        @font-face { font-family: '20'; src: url('20.ttf') format('truetype'); }
+        @font-face { font-family: '21'; src: url('21.ttf') format('truetype'); }
+        @font-face { font-family: '22'; src: url('22.ttf') format('truetype'); }
+        @font-face { font-family: '23'; src: url('23.ttf') format('truetype'); }
+        @font-face { font-family: '24'; src: url('24.ttf') format('truetype'); }
+        @font-face { font-family: '25'; src: url('25.ttf') format('truetype'); }
+
+        /* 網頁外觀樣式 */
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 20px; background-color: #f8f9fa; display: flex; justify-content: center; }
         .container { width: 100%; max-width: 500px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
         h2 { color: #333; text-align: center; margin-bottom: 25px; font-weight: 600; }
@@ -49,9 +43,10 @@
             width: 100%; height: 140px; border: 2px dashed #007AFF; border-radius: 8px;
             display: flex; align-items: center; justify-content: center;
             margin-bottom: 20px; background-color: #fff;
-            font-family: 'Noto Serif TC', serif; font-size: 36px; color: #222;
+            font-size: 36px; color: #222;
             text-align: center; word-break: break-all; padding: 10px; box-sizing: border-box;
         }
+        .footer-note { color: #999; font-size: 12px; text-align: center; border-top: 1px solid #eee; padding-top: 15px; }
     </style>
 </head>
 <body>
@@ -64,36 +59,40 @@
     
     <label>選擇印刷字體：</label>
     <select id="fontSelect">
-            <option value="'02', sans-serif">中圓體</option>
-            <option value="'03', sans-serif">少女體</option>
-            <option value="'04', sans-serif">古印體</option>
-            <option value="'05', sans-serif">布丁體</option>
-            <option value="'06', sans-serif">行書體</option>
-            <option value="'07', sans-serif">娃娃體</option>
-            <option value="'08', sans-serif">流葉體</option>
-            <option value="'09', sans-serif">流隸體</option>
-            <option value="'10', sans-serif">童童體(仿手寫字)</option>
-            <option value="'11', sans-serif">海報體</option>
-            <option value="'12', sans-serif">堪亭體</option>
-            <option value="'13', sans-serif">新篆體</option>
-            <option value="'14', sans-serif">特明體</option>
-            <option value="'15', sans-serif">秀風體(仿手寫字)</option>
-            <option value="'16', sans-serif">翩翩體(仿手寫字)</option>
-            <option value="'17', sans-serif">POP體</option>
-            <option value="'18', sans-serif">墨字體</option>
-            <option value="'19', sans-serif">注音體(注意會有同字不同音</option>
-            <option value="'20', sans-serif">隸書體</option>
-            <option value="'21', sans-serif">皮皮體</option>
-            <option value="'22', sans-serif">兒風體</option>
-            <option value="'23', sans-serif">中黑體</option>
-            <option value="'24', sans-serif">寶風體</option>
-            <option value="'25', sans-serif">竹風體</option>
-            <option value="'Comic Sans MS', 'Comic Sans', cursive">Comic Sans MS (不支援中文字)</option>
-            <option value="Arial, Helvetica, sans-serif">Arial (不支援中文字)</option>
-            <option value="'Times New Roman', Times, serif">Times New Roman (不支援中文字)</option>
-            <option value="'Brush Script MT', cursive">Brush Script (不支援中文字)</option>
-            <option value="'Snell Roundhand', 'Apple Chancery', cursive">Snell Roundhand (不支援中文字)</option>
-        
+        <optgroup label="--- 熊愛印中文字體 ---">
+            <option value="'01', sans-serif">01 預設字體</option>
+            <option value="'02', sans-serif">02 中圓體</option>
+            <option value="'03', sans-serif">03 少女體</option>
+            <option value="'04', sans-serif">04 古印體</option>
+            <option value="'05', sans-serif">05 布丁體</option>
+            <option value="'06', sans-serif">06 行書體</option>
+            <option value="'07', sans-serif">07 娃娃體</option>
+            <option value="'08', sans-serif">08 流葉體</option>
+            <option value="'09', sans-serif">09 流隸體</option>
+            <option value="'10', sans-serif">10 童童體(仿手寫)</option>
+            <option value="'11', sans-serif">11 海報體</option>
+            <option value="'12', sans-serif">12 堪亭體</option>
+            <option value="'13', sans-serif">13 新篆體</option>
+            <option value="'14', sans-serif">14 特明體</option>
+            <option value="'15', sans-serif">15 秀風體(仿手寫)</option>
+            <option value="'16', sans-serif">16 翩翩體(仿手寫)</option>
+            <option value="'17', sans-serif">17 POP體</option>
+            <option value="'18', sans-serif">18 墨字體</option>
+            <option value="'19', sans-serif">19 注音體</option>
+            <option value="'20', sans-serif">20 隸書體</option>
+            <option value="'21', sans-serif">21 皮皮體</option>
+            <option value="'22', sans-serif">22 兒風體</option>
+            <option value="'23', sans-serif">23 中黑體</option>
+            <option value="'24', sans-serif">24 寶風體</option>
+            <option value="'25', sans-serif">25 竹風體</option>
+        </optgroup>
+        <optgroup label="--- 系統內建(不支援中文) ---">
+            <option value="'Comic Sans MS', cursive">Comic Sans MS</option>
+            <option value="Arial">Arial</option>
+            <option value="'Times New Roman'">Times New Roman</option>
+            <option value="'Brush Script MT', cursive">Brush Script</option>
+            <option value="'Snell Roundhand', cursive">Snell Roundhand</option>
+        </optgroup>
     </select>
 
     <div class="label-preview" id="previewBox">預覽文字</div>
@@ -104,28 +103,28 @@
     <div class="footer-note">
         <p>※ 此為數位模擬效果，實際印刷成品以校稿單為準。</p>
     </div>
-    <p style="text-align:center; font-weight: bold;">
-    滿意這個字體嗎？<br>
-  <div style="text-align: center; margin-top: 20px; font-weight: bold; line-height: 2;">
-    <div>
-        <a href="https://shopee.tw/exprint" target="_blank" style="color: #aa7700; text-decoration: none;">👉 點我前往蝦皮「熊愛印」下單</a>
-    </div>
-    <div>
-        <a href="https://www.syong-ai-yin.com/" target="_blank" style="color: #aa7700; text-decoration: none;">👉 點我前往官網「熊愛印」下單</a>
+
+    <div style="text-align: center; margin-top: 20px; font-weight: bold; line-height: 2;">
+        <div>
+            <a href="https://shopee.tw/exprint" target="_blank" style="color: #ee4d2d; text-decoration: none;">👉 點我前往蝦皮「熊愛印」下單</a>
+        </div>
+        <div>
+            <a href="https://www.syong-ai-yin.com/" target="_blank" style="color: #aa7700; text-decoration: none;">👉 點我前往官網「熊愛印」下單</a>
+        </div>
     </div>
 </div>
-    
-</p>
 
 <script>
     const fontSelect = document.getElementById('fontSelect');
     const previewBox = document.getElementById('previewBox');
     const userInput = document.getElementById('userInput');
 
+    // 文字更新邏輯
     userInput.addEventListener('input', () => {
-        previewBox.textContent = userInput.value.trim() || "預覽文字";
+        previewBox.textContent = userInput.value || "預覽文字";
     });
 
+    // 字體切換邏輯
     fontSelect.addEventListener('change', () => {
         previewBox.style.fontFamily = fontSelect.value;
     });
