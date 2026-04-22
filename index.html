@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
     <style>
+        /* 字體定義 */
         @font-face { font-family: '01'; src: url('01.woff2') format('woff2'); }
         @font-face { font-family: '02'; src: url('02.ttf') format('truetype'); }
         @font-face { font-family: '03'; src: url('03.ttf') format('truetype'); }
@@ -33,7 +34,6 @@
         @font-face { font-family: '24'; src: url('24.ttf') format('truetype'); }
         @font-face { font-family: '25'; src: url('25.ttf') format('truetype'); }
         @font-face { font-family: '26'; src: url('26.ttf') format('truetype'); }
-        @font-face { font-family: '25'; src: url('29.ttf') format('truetype'); }
 
         /* 網頁外觀樣式 */
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 20px; background-color: #f8f9fa; display: flex; justify-content: center; }
@@ -47,9 +47,10 @@
             margin-bottom: 20px; background-color: #fff;
             font-size: 36px; color: #222;
             text-align: center; word-break: break-all; padding: 10px; box-sizing: border-box;
+            /* 初始預設字體 */
+            font-family: '01', serif;
         }
         .footer-note { color: #999; font-size: 12px; text-align: center; border-top: 1px solid #eee; padding-top: 15px; }
-    .label-preview, #previewBox { font-family: '01', serif; }
     </style>
 </head>
 <body>
@@ -63,7 +64,7 @@
     <label>選擇印刷字體：</label>
     <select id="fontSelect">
         <optgroup label="--- 熊愛印中文字體 ---">
-            <option value="'01', sans-serif">01 標楷體</option>
+            <option value="'01', serif" selected>01 標楷體</option>
             <option value="'02', sans-serif">02 中圓體</option>
             <option value="'03', sans-serif">03 少女體</option>
             <option value="'04', sans-serif">04 古印體</option>
@@ -131,6 +132,16 @@
     fontSelect.addEventListener('change', () => {
         previewBox.style.fontFamily = fontSelect.value;
     });
+
+    // --- 新增：確保一載入就同步 ---
+    function syncDefaultFont() {
+        previewBox.style.fontFamily = fontSelect.value;
+    }
+
+    // 網頁跑完立刻跑一次
+    syncDefaultFont();
+    // 1秒後再跑一次 (預防字體檔下載比較慢)
+    setTimeout(syncDefaultFont, 1000);
 </script>
 
 </body>
