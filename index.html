@@ -38,8 +38,8 @@
         @font-face { font-family: '29'; src: url('29.woff2') format('woff2'); }
 
         /* 網頁外觀樣式 */
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 20px; background-color: #f8f9fa; display: flex; justify-content: center; }
-        .container { width: 100%; max-width: 500px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 20px; background-color: #f8f9fa; display: flex; justify-content: center; min-height: 100vh; margin: 0; }
+        .container { width: 100%; max-width: 500px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); align-self: flex-start; margin-top: 20px; }
         h2 { color: #333; text-align: center; margin-bottom: 25px; font-weight: 600; }
         label { display: block; margin-bottom: 8px; color: #666; font-size: 14px; }
         select, input { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; box-sizing: border-box; }
@@ -49,10 +49,10 @@
             margin-bottom: 20px; background-color: #fff;
             font-size: 36px; color: #222;
             text-align: center; word-break: break-all; padding: 10px; box-sizing: border-box;
-            /* 初始預設字體 */
             font-family: '01', serif;
         }
         .footer-note { color: #999; font-size: 12px; text-align: center; border-top: 1px solid #eee; padding-top: 15px; }
+        a { text-decoration: none; }
     </style>
 </head>
 <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
@@ -108,99 +108,24 @@
     
     <div class="footer-note">
         <p>※ 此為數位模擬效果，實際印刷成品為準。</p>
-        <p>※ 選好字體請在訂單或訊息內備註,請勿螢幕截圖傳喔!</p>
+        <p>※ 選好字體請在訂單或訊息內備註，請勿螢幕截圖傳喔！</p>
     </div>
 
     <div style="text-align: center; margin-top: 20px; font-weight: bold; line-height: 2;">
         <div>
-            <a href="https://shopee.tw/exprint" target="_blank" style="color: #aa7700; text-decoration: none;">👉 點我前往蝦皮「熊愛印」下單</a>
+            <a href="https://shopee.tw/exprint" target="_blank" style="color: #aa7700;">👉 點我前往蝦皮「熊愛印」下單</a>
         </div>
         <div>
-            <a href="https://www.syong-ai-yin.com/" target="_blank" style="color: #aa7700; text-decoration: none;">👉 點我前往官網「熊愛印」下單</a>
+            <a href="https://www.syong-ai-yin.com/" target="_blank" style="color: #aa7700;">👉 點我前往官網「熊愛印」下單</a>
         </div>
-<div style="text-align: center; margin: 40px auto; width: 100%; clear: both;">
-    <button type="button" onclick="openBearModal()" style="background: #ffffff; border: 2px solid #ffcc00; padding: 12px 30px; border-radius: 50px; color: #555; cursor: pointer; font-size: 15px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: all 0.3s ease;">
-        📏 點我看：印刷文字大小對照 (含mm)
-    </button>
-</div>
+    </div>
 
-<div id="sizeGuideModal" onclick="closeBearModal()" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.7); z-index: 999999; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);">
-    <div onclick="event.stopPropagation()" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 380px; background: white; padding: 30px; border-radius: 25px; border: 5px solid #ffcc00; box-shadow: 0 25px 50px rgba(0,0,0,0.5);">
-        <h3 style="margin-top: 0; text-align: center; color: #333; font-size: 22px; letter-spacing: 1px;">📏 印刷大小專業對照</h3>
-        
-        <table style="width: 100%; border-collapse: collapse; font-size: 15px; margin-top: 15px;">
-            <tr style="background: #fff9db; font-weight: bold; text-align: left;">
-                <td style="padding: 10px; border-bottom: 2px solid #ffcc00;">點數(pt)</td>
-                <td style="padding: 10px; border-bottom: 2px solid #ffcc00;">毫米(mm)</td>
-                <td style="padding: 10px; border-bottom: 2px solid #ffcc00;">建議應用</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #eee;">
-                <td style="padding: 10px;"><b>6 pt</b></td>
-                <td style="padding: 10px;">2.12 mm</td>
-                <td style="padding: 10px; color: #d9534f; font-weight: bold;">⚠️極小</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #eee;">
-                <td style="padding: 10px;"><b>10 pt</b></td>
-                <td style="padding: 10px;">3.53 mm</td>
-                <td style="padding: 10px; color: #5cb85c; font-weight: bold;">✅內文</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #eee;">
-                <td style="padding: 10px;"><b>14 pt</b></td>
-                <td style="padding: 10px;">4.94 mm</td>
-                <td style="padding: 10px; color: #0275d8; font-weight: bold;">⭐推薦</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #eee;">
-                <td style="padding: 10px;"><b>18 pt</b></td>
-                <td style="padding: 10px;">6.35 mm</td>
-                <td style="padding: 10px;">醒目標題</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #eee;">
-                <td style="padding: 10px;"><b>24 pt</b></td>
-                <td style="padding: 10px;">8.47 mm</td>
-                <td style="padding: 10px;">特大重點</td>
-            </tr>
-        </table>
-
-        <div style="background: #fdfdfe; border-left: 5px solid #ffcc00; padding: 15px; border-radius: 8px; font-size: 14px; color: #666; margin-top: 20px; line-height: 1.6; text-align: center;">
-            💡 <b>專業秘訣：</b>拿原子筆尖對著螢幕，<br>字比筆尖細就太小了！
-        </div>
-        
-        <button onclick="closeBearModal()" style="width: 100%; margin-top: 20px; padding: 15px; border: none; background: #f0f0f0; color: #333; border-radius: 12px; cursor: pointer; font-weight: bold; font-size: 16px;">關閉窗口</button>
+    <div style="text-align: center; margin-top: 30px;">
+        <button type="button" onclick="openBearModal()" style="background: #ffffff; border: 2px solid #ffcc00; padding: 12px 25px; border-radius: 50px; color: #555; cursor: pointer; font-size: 15px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            📏 點我看：印刷文字大小對照 (含mm)
+        </button>
     </div>
 </div>
 
-<script>
-    function openBearModal() { document.getElementById('sizeGuideModal').style.display = 'block'; }
-    function closeBearModal() { document.getElementById('sizeGuideModal').style.display = 'none'; }
-</script>
-</div>
-
-<script>
-    const fontSelect = document.getElementById('fontSelect');
-    const previewBox = document.getElementById('previewBox');
-    const userInput = document.getElementById('userInput');
-
-    // 文字更新邏輯
-    userInput.addEventListener('input', () => {
-        previewBox.textContent = userInput.value || "預覽文字";
-    });
-
-    // 字體切換邏輯
-    fontSelect.addEventListener('change', () => {
-        previewBox.style.fontFamily = fontSelect.value;
-    });
-
-    // --- 新增：確保一載入就同步 ---
-    function syncDefaultFont() {
-        previewBox.style.fontFamily = fontSelect.value;
-    }
-
-    // 網頁跑完立刻跑一次
-    syncDefaultFont();
-    // 1秒後再跑一次 (預防字體檔下載比較慢)
-    setTimeout(syncDefaultFont, 1000);
-</script>
-
-</script>
-</body>
-</html>
+<div id="sizeGuideModal" onclick="closeBearModal()" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.7); z-index: 999999; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);">
+    <div onclick="event.stopPropagation()" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 380px; background: white; padding: 30px; border-radius: 25px; border: 5px solid #ffcc00; box-shadow: 0 25px 5
