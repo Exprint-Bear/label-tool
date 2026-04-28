@@ -146,6 +146,49 @@
     // 1秒後再跑一次 (預防字體檔下載比較慢)
     setTimeout(syncDefaultFont, 1000);
 </script>
+<div style="max-width: 600px; margin: 40px auto; padding: 20px; border: 2px solid #ffcc00; border-radius: 15px; font-family: 'Microsoft JhengHei', sans-serif; line-height: 1.6; background-color: #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+        <h3 style="color: #333; border-left: 5px solid #ffcc00; padding-left: 12px; margin-top: 0; margin-bottom: 20px; font-size: 1.2rem;">📏 印刷大小參考指南</h3>
+        
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="display: flex; align-items: center; border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <div style="flex: 1.2;">
+                    <strong style="font-size: 16px; color: #444;">6 pt (極小)</strong><br>
+                    <small style="color: #888;">約發票上的最小字</small>
+                </div>
+                <div style="flex: 1; color: #d9534f; font-size: 14px; font-weight: bold;">⚠️ 僅限警語</div>
+            </div>
 
+            <div style="display: flex; align-items: center; border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <div style="flex: 1.2;">
+                    <strong style="font-size: 16px; color: #444;">10 pt (適中)</strong><br>
+                    <small style="color: #888;">約報紙內文大小</small>
+                </div>
+                <div style="flex: 1; color: #5cb85c; font-size: 14px; font-weight: bold;">✅ 電話地址</div>
+            </div>
+
+            <div style="display: flex; align-items: center; border-bottom: 1px solid #f0f0f0; padding-bottom: 8px;">
+                <div style="flex: 1.2;">
+                    <strong style="font-size: 16px; color: #444;">14 pt (清晰)</strong><br>
+                    <small style="color: #888;">約10元硬幣上的字</small>
+                </div>
+                <div style="flex: 1; color: #0275d8; font-size: 14px; font-weight: bold;">⭐ 推薦品名</div>
+            </div>
+        </div>
+
+        <div style="background: #fff9db; padding: 12px; border-radius: 8px; font-size: 14px; color: #856404; margin-top: 15px;">
+            💡 <b>專業小提醒：</b><br>
+            螢幕看都會放很大，您可以拿一支<b>原子筆</b>對著螢幕比對。如果您預視的字比筆芯還細，印刷出來會很難辨識喔！
+        </div>
+    </div>
+    ```
+
+### 貼完後的結構會長這樣：
+```html
+    <script>
+        // ... 原本的程式碼 ...
+        setTimeout(syncDefaultFont, 1000);
+    </script>
+
+    </body>
 </body>
 </html>
