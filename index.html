@@ -5,57 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>熊愛印標籤字體預視系統</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
     <style>
-        /* 字體定義 - 加上 ./ 強制定位與 swap 避免文字消失 */
-        @font-face { font-family: '01'; src: url('./01.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '02'; src: url('./02.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '03'; src: url('./03.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '04'; src: url('./04.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '05'; src: url('./05.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '06'; src: url('./06.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '07'; src: url('./07.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '08'; src: url('./08.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '09'; src: url('./09.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '10'; src: url('./10.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '11'; src: url('./11.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '12'; src: url('./12.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '13'; src: url('./13.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '14'; src: url('./14.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '15'; src: url('./15.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '16'; src: url('./16.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '17'; src: url('./17.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '18'; src: url('./18.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '19'; src: url('./19.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '20'; src: url('./20.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '21'; src: url('./21.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '22'; src: url('./22.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '23'; src: url('./23.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '24'; src: url('./24.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '25'; src: url('./25.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '26'; src: url('./26.woff2') format('woff2'); font-display: swap; }
-        @font-face { font-family: '29'; src: url('./29.woff2') format('woff2'); font-display: swap; }
+        /* 【核心優化】字體定義 - 使用 block 強迫 Mac 載入，並加上 ./ 路徑 */
+        @font-face { font-family: '01'; src: url('./01.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '02'; src: url('./02.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '03'; src: url('./03.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '04'; src: url('./04.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '05'; src: url('./05.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '06'; src: url('./06.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '07'; src: url('./07.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '08'; src: url('./08.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '09'; src: url('./09.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '10'; src: url('./10.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '11'; src: url('./11.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '12'; src: url('./12.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '13'; src: url('./13.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '14'; src: url('./14.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '15'; src: url('./15.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '16'; src: url('./16.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '17'; src: url('./17.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '18'; src: url('./18.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '19'; src: url('./19.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '20'; src: url('./20.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '21'; src: url('./21.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '22'; src: url('./22.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '23'; src: url('./23.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '24'; src: url('./24.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '25'; src: url('./25.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '26'; src: url('./26.woff2') format('woff2'); font-display: block; }
+        @font-face { font-family: '29'; src: url('./29.woff2') format('woff2'); font-display: block; }
 
-        /* 網頁外觀樣式 */
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; padding: 20px; background-color: #f8f9fa; display: flex; justify-content: center; min-height: 100vh; margin: 0; }
+        /* 網頁樣式 */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 20px; background-color: #f8f9fa; display: flex; justify-content: center; min-height: 100vh; margin: 0; }
         .container { width: 100%; max-width: 500px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); align-self: flex-start; margin-top: 20px; }
         h2 { color: #333; text-align: center; margin-bottom: 25px; font-weight: 600; }
         label { display: block; margin-bottom: 8px; color: #666; font-size: 14px; }
-        select, input { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; box-sizing: border-box; outline: none; }
-        select:focus, input:focus { border-color: #007AFF; }
+        select, input { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; box-sizing: border-box; }
         .label-preview {
             width: 100%; height: 140px; border: 2px dashed #007AFF; border-radius: 8px;
             display: flex; align-items: center; justify-content: center;
             margin-bottom: 20px; background-color: #fff;
             font-size: 36px; color: #222;
             text-align: center; word-break: break-all; padding: 10px; box-sizing: border-box;
-            transition: font-family 0.3s ease;
         }
         .footer-note { color: #999; font-size: 12px; text-align: center; border-top: 1px solid #eee; padding-top: 15px; margin-bottom: 20px; }
         .order-links { text-align: center; font-weight: bold; line-height: 2.2; margin-top: 10px; }
         .order-links a { color: #aa7700; text-decoration: none; }
-        .order-links a:hover { text-decoration: underline; }
     </style>
 </head>
 <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
@@ -125,28 +120,26 @@
     const previewBox = document.getElementById('previewBox');
     const userInput = document.getElementById('userInput');
 
-    // 更新預覽文字
-    userInput.addEventListener('input', () => {
+    function updatePreview() {
+        const selectedFont = fontSelect.value;
         previewBox.textContent = userInput.value || "預覽文字";
-    });
-
-    // 強制更新字體函式 - 增加後備字體確保 Mac 顯示正常
-    function updatePreviewFont() {
-        const val = fontSelect.value;
-        // 如果是我們自定義的數字編號字體，手動補上引號與後備字體
-        if (!isNaN(val) || val.length <= 2) {
-            previewBox.style.fontFamily = `'${val}', "PingFang TC", "Heiti TC", "Microsoft JhengHei", sans-serif`;
-        } else {
-            previewBox.style.fontFamily = val;
-        }
+        
+        // 【關鍵優化】強制套用字體並加上 Mac 備援字體
+        previewBox.style.fontFamily = `'${selectedFont}', "PingFang TC", "Heiti TC", sans-serif`;
+        
+        // 強制瀏覽器重繪 (Hack for Mac)
+        previewBox.style.visibility = 'hidden';
+        previewBox.offsetHeight; 
+        previewBox.style.visibility = 'visible';
     }
 
-    fontSelect.addEventListener('change', updatePreviewFont);
+    userInput.addEventListener('input', updatePreview);
+    fontSelect.addEventListener('change', updatePreview);
 
-    // 初始化與延遲載入確保
-    window.onload = updatePreviewFont;
-    setTimeout(updatePreviewFont, 500);
-    setTimeout(updatePreviewFont, 2000); // 針對大檔案字體第二次強制更新
+    // 頁面載入後分段執行，確保大型字體檔下載完後能立刻更新
+    window.onload = updatePreview;
+    setTimeout(updatePreview, 500);
+    setTimeout(updatePreview, 2500);
 </script>
 
 </body>
