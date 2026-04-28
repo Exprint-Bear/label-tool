@@ -118,44 +118,60 @@
         <div>
             <a href="https://www.syong-ai-yin.com/" target="_blank" style="color: #aa7700; text-decoration: none;">👉 點我前往官網「熊愛印」下單</a>
         </div>
-        <div style="text-align: center; margin: 30px 0 50px 0;">
+       <div style="text-align: center; margin: 30px 0 50px 0;">
     <button type="button" onclick="openBearModal()" style="background-color: #ffffff; border: 1px solid #ddd; padding: 8px 20px; border-radius: 25px; color: #666; cursor: pointer; font-size: 14px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-        📏 點我看：印刷文字大小參考
+        📏 點我看：印刷文字大小參考 (含mm對照)
     </button>
 </div>
 
 <div id="sizeGuideModal" onclick="closeBearModal()" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 10000; backdrop-filter: blur(2px);">
-    <div onclick="event.stopPropagation()" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 85%; max-width: 320px; background: white; padding: 25px; border-radius: 15px; border: 3px solid #ffcc00; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-        <h3 style="margin-top: 0; text-align: center; color: #333;">📏 印刷大小指南</h3>
-        <div style="font-size: 16px; line-height: 2.2;">
-            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee;">
-                <span><b>6 pt</b> (發票小字)</span>
-                <span style="color: #d9534f; font-weight: bold;">⚠️ 極小</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee;">
-                <span><b>10 pt</b> (報紙內文)</span>
-                <span style="color: #5cb85c; font-weight: bold;">✅ 清楚</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee;">
-                <span><b>14 pt</b> (10元硬幣字)</span>
-                <span style="color: #0275d8; font-weight: bold;">⭐ 推薦</span>
-            </div>
-        </div>
-        <div style="background: #fff9db; padding: 12px; border-radius: 8px; font-size: 13px; color: #856404; margin-top: 15px; text-align: center;">
-            💡 <b>專業秘訣：</b>拿原子筆尖對著螢幕，<br>字比筆尖細就太小了！
+    <div onclick="event.stopPropagation()" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 380px; background: white; padding: 25px; border-radius: 15px; border: 3px solid #ffcc00; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+        <h3 style="margin-top: 0; text-align: center; color: #333;">📏 印刷大小專業對照表</h3>
+        
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.8;">
+            <tr style="background: #f8f9fa; font-weight: bold; border-bottom: 2px solid #eee;">
+                <td style="padding: 8px;">點數 (pt)</td>
+                <td style="padding: 8px;">高度 (mm)</td>
+                <td style="padding: 8px;">建議用途</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 8px;"><b>6 pt</b></td>
+                <td style="padding: 8px;">2.12 mm</td>
+                <td style="padding: 8px; color: #d9534f;">⚠️ 極小/警語</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 8px;"><b>10 pt</b></td>
+                <td style="padding: 8px;">3.53 mm</td>
+                <td style="padding: 8px; color: #5cb85c;">✅ 電話地址</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 8px;"><b>14 pt</b></td>
+                <td style="padding: 8px;">4.94 mm</td>
+                <td style="padding: 8px; color: #0275d8;">⭐ 推薦品名</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 8px;"><b>18 pt</b></td>
+                <td style="padding: 8px;">6.35 mm</td>
+                <td style="padding: 8px;">📢 醒目標題</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 8px;"><b>24 pt</b></td>
+                <td style="padding: 8px;">8.47 mm</td>
+                <td style="padding: 8px;">🔥 大標題/海報</td>
+            </tr>
+        </table>
+
+        <div style="background: #fff9db; padding: 12px; border-radius: 8px; font-size: 13px; color: #856404; margin-top: 15px;">
+            💡 <b>專業秘訣：</b>拿原子筆尖對著螢幕，字比筆尖細就太小了！另外 14pt 以上印刷效果最清晰喔。
         </div>
         <button onclick="closeBearModal()" style="width: 100%; margin-top: 15px; padding: 10px; border: none; background: #f0f0f0; border-radius: 8px; cursor: pointer; font-weight: bold;">關閉</button>
-    </div> </div> <script>
-    // 開啟指南彈窗
-    function openBearModal() {
-        document.getElementById('sizeGuideModal').style.display = 'block';
-    }
-    // 關閉指南彈窗
-    function closeBearModal() {
-        document.getElementById('sizeGuideModal').style.display = 'none';
-    }
-</script>
     </div>
+</div>
+
+<script>
+    function openBearModal() { document.getElementById('sizeGuideModal').style.display = 'block'; }
+    function closeBearModal() { document.getElementById('sizeGuideModal').style.display = 'none'; }
+</script>    </div>
 </div>
 
 <script>
