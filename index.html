@@ -128,4 +128,75 @@
 </div>
 
 <div id="sizeGuideModal" onclick="closeBearModal()" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.7); z-index: 999999; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);">
-    <div onclick="event.stopPropagation()" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 380px; background: white; padding: 30px; border-radius: 25px; border: 5px solid #ffcc00; box-shadow: 0 25px 5
+    <div onclick="event.stopPropagation()" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 380px; background: white; padding: 30px; border-radius: 25px; border: 5px solid #ffcc00; box-shadow: 0 25px 50px rgba(0,0,0,0.5);">
+        <h3 style="margin-top: 0; text-align: center; color: #333; font-size: 22px;">📏 印刷大小專業對照</h3>
+        
+        <table style="width: 100%; border-collapse: collapse; font-size: 15px; margin-top: 15px;">
+            <tr style="background: #fff9db; font-weight: bold;">
+                <td style="padding: 10px; border-bottom: 2px solid #ffcc00;">點數(pt)</td>
+                <td style="padding: 10px; border-bottom: 2px solid #ffcc00;">毫米(mm)</td>
+                <td style="padding: 10px; border-bottom: 2px solid #ffcc00;">建議應用</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 10px;"><b>6 pt</b></td>
+                <td style="padding: 10px;">2.12 mm</td>
+                <td style="padding: 10px; color: #d9534f; font-weight: bold;">⚠️極小</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 10px;"><b>10 pt</b></td>
+                <td style="padding: 10px;">3.53 mm</td>
+                <td style="padding: 10px; color: #5cb85c; font-weight: bold;">✅內文</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 10px;"><b>14 pt</b></td>
+                <td style="padding: 10px;">4.94 mm</td>
+                <td style="padding: 10px; color: #0275d8; font-weight: bold;">⭐推薦</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 10px;"><b>18 pt</b></td>
+                <td style="padding: 10px;">6.35 mm</td>
+                <td style="padding: 10px;">醒目標題</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 10px;"><b>24 pt</b></td>
+                <td style="padding: 10px;">8.47 mm</td>
+                <td style="padding: 10px;">特大重點</td>
+            </tr>
+        </table>
+
+        <div style="background: #fdfdfe; border-left: 5px solid #ffcc00; padding: 15px; border-radius: 8px; font-size: 14px; color: #666; margin-top: 20px; line-height: 1.6; text-align: center;">
+            💡 <b>專業秘訣：</b>拿原子筆尖對著螢幕，<br>字比筆尖細就太小了！
+        </div>
+        
+        <button onclick="closeBearModal()" style="width: 100%; margin-top: 20px; padding: 15px; border: none; background: #f0f0f0; color: #333; border-radius: 12px; cursor: pointer; font-weight: bold; font-size: 16px;">關閉窗口</button>
+    </div>
+</div>
+
+<script>
+    // 彈窗控制
+    function openBearModal() { document.getElementById('sizeGuideModal').style.display = 'block'; }
+    function closeBearModal() { document.getElementById('sizeGuideModal').style.display = 'none'; }
+
+    // 預覽功能控制
+    const fontSelect = document.getElementById('fontSelect');
+    const previewBox = document.getElementById('previewBox');
+    const userInput = document.getElementById('userInput');
+
+    userInput.addEventListener('input', () => {
+        previewBox.textContent = userInput.value || "預覽文字";
+    });
+
+    fontSelect.addEventListener('change', () => {
+        previewBox.style.fontFamily = fontSelect.value;
+    });
+
+    function syncDefaultFont() {
+        previewBox.style.fontFamily = fontSelect.value;
+    }
+
+    syncDefaultFont();
+    setTimeout(syncDefaultFont, 1000);
+</script>
+
+</body>
+</html>
