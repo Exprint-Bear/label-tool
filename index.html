@@ -5,125 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>熊愛印標籤字體預視系統</title>
     <style>
-        /* 使用絕對路徑概念 (./) 並加上隨機版本號 (?v=update) 騙過 Mac 的快取 */
-        @font-face { font-family: '01'; src: url('./01.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '02'; src: url('./02.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '03'; src: url('./03.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '04'; src: url('./04.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '05'; src: url('./05.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '06'; src: url('./06.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '07'; src: url('./07.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '08'; src: url('./08.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '09'; src: url('./09.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '10'; src: url('./10.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '11'; src: url('./11.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '12'; src: url('./12.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '13'; src: url('./13.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '14'; src: url('./14.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '15'; src: url('./15.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '16'; src: url('./16.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '17'; src: url('./17.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '18'; src: url('./18.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '19'; src: url('./19.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '20'; src: url('./20.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '21'; src: url('./21.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '22'; src: url('./22.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '23'; src: url('./23.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '24'; src: url('./24.woff2?v=1') format('woff2'); font-display: block; }
-        @font-face { font-family: '25'; src: url('./25.woff2?v=1') format('woff2'); font-display: block; }
+        /* 直接對齊你截圖中的檔名 */
+        @font-face { font-family: '01'; src: url('./01.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '02'; src: url('./02.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '03'; src: url('./03.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '04'; src: url('./04.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '05'; src: url('./05.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '06'; src: url('./06.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '07'; src: url('./07.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '08'; src: url('./08.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '09'; src: url('./09.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '10'; src: url('./10.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '11'; src: url('./11.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '12'; src: url('./12.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '13'; src: url('./13.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '14'; src: url('./14.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '15'; src: url('./15.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '16'; src: url('./16.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '17'; src: url('./17.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '18'; src: url('./18.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '19'; src: url('./19.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '20'; src: url('./20.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '21'; src: url('./21.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '22'; src: url('./22.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '23'; src: url('./23.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '24'; src: url('./24.woff2') format('woff2'); font-display: swap; }
+        @font-face { font-family: '25'; src: url('./25.woff2') format('woff2'); font-display: swap; }
 
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 20px; background-color: #f8f9fa; display: flex; justify-content: center; min-height: 100vh; margin: 0; }
-        .container { width: 100%; max-width: 500px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); align-self: flex-start; margin-top: 20px; }
-        h2 { color: #333; text-align: center; margin-bottom: 25px; font-weight: 600; }
-        label { display: block; margin-bottom: 8px; color: #666; font-size: 14px; }
-        select, input { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; box-sizing: border-box; }
+        body { font-family: -apple-system, sans-serif; display: flex; justify-content: center; background: #f8f9fa; padding: 20px; }
+        .container { width: 100%; max-width: 450px; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h2 { text-align: center; }
+        select, input { width: 100%; padding: 12px; margin: 10px 0 20px; border-radius: 8px; border: 1px solid #ddd; font-size: 16px; box-sizing: border-box; }
         .label-preview {
-            width: 100%; height: 140px; border: 2px dashed #007AFF; border-radius: 8px;
+            width: 100%; height: 120px; border: 2px dashed #007AFF; border-radius: 10px;
             display: flex; align-items: center; justify-content: center;
-            margin-bottom: 20px; background-color: #fff;
-            font-size: 36px; color: #222; text-align: center; word-break: break-all; padding: 10px; box-sizing: border-box;
-            /* 預設字體 */
-            font-family: '01', "PingFang TC", sans-serif;
+            font-size: 32px; text-align: center; margin-bottom: 20px;
         }
-        .footer-note { color: #999; font-size: 12px; text-align: center; border-top: 1px solid #eee; padding-top: 15px; margin-bottom: 20px; }
-        .order-links { text-align: center; font-weight: bold; line-height: 2.2; margin-top: 10px; }
+        .order-links { text-align: center; line-height: 2; font-weight: bold; }
         .order-links a { color: #aa7700; text-decoration: none; }
     </style>
 </head>
-<body oncontextmenu="return false">
-
+<body>
 <div class="container">
-    <div style="text-align: center; margin-bottom: 20px;">
-        <img src="https://cdn.store-assets.com/s/1179587/f/16931782.png" alt="Logo" style="max-width: 150px;">
-    </div>
-    <h2>標籤字體預視</h2>
-    
-    <label>選擇印刷字體：</label>
-    <select id="fontSelect">
-        <option value="01" selected>01 標楷體</option>
-        <option value="02">02 中圓體</option>
-        <option value="03">03 少女體</option>
-        <option value="04">04 古印體</option>
-        <option value="05">05 布丁體</option>
-        <option value="06">06 行書體</option>
-        <option value="07">07 娃娃體</option>
-        <option value="08">08 流葉體</option>
-        <option value="09">09 流隸體</option>
-        <option value="10">10 童童體</option>
-        <option value="11">11 海報體</option>
-        <option value="12">12 堪亭體</option>
+    <div style="text-align: center;"><img src="https://cdn.store-assets.com/s/1179587/f/16931782.png" style="max-width: 120px;"></div>
+    <h2>字體預視</h2>
+    <label>選擇字體：</label>
+    <select id="fs">
+        <option value="01">01 標楷體</option>
         <option value="13">13 新篆體</option>
-        <option value="14">14 特明體</option>
-        <option value="15">15 秀風體</option>
-        <option value="16">16 翩翩體</option>
-        <option value="17">17 POP體</option>
-        <option value="18">18 墨字體</option>
-        <option value="19">19 注音體</option>
-        <option value="20">20 隸書體</option>
-        <option value="21">21 皮皮體</option>
-        <option value="22">22 兒風體</option>
         <option value="23">23 中黑體</option>
-        <option value="24">24 寶風體</option>
-        <option value="25">25 竹風體</option>
-    </select>
-
-    <div class="label-preview" id="previewBox">預覽文字</div>
-
-    <label>輸入標籤內容：</label>
-    <input type="text" id="userInput" placeholder="請在此輸入文字..." maxlength="25">
-    
-    <div class="footer-note">
-        <p>※ 此為數位模擬效果，實際印刷成品為準。</p>
-        <p>※ 選好字體請在訂單備註，請勿螢幕截圖喔！</p>
-    </div>
-
-    <div class="order-links">
-        <div><a href="https://shopee.tw/exprint" target="_blank">👉 前往蝦皮下單</a></div>
-        <div><a href="https://www.syong-ai-yin.com/" target="_blank">👉 前往官網下單</a></div>
-    </div>
+        </select>
+    <div class="label-preview" id="pv">預覽文字</div>
+    <label>輸入內容：</label>
+    <input type="text" id="ui" placeholder="請輸入文字..." maxlength="20">
+    <div class="order-links"><a href="https://shopee.tw/exprint" target="_blank">👉 前往蝦皮下單</a></div>
 </div>
-
 <script>
-    const fontSelect = document.getElementById('fontSelect');
-    const previewBox = document.getElementById('previewBox');
-    const userInput = document.getElementById('userInput');
-
-    function applyFont() {
-        const fontName = fontSelect.value;
-        // 使用更暴力的設定方式，確保 Mac 接收到指令
-        previewBox.style.setProperty('font-family', `'${fontName}', "PingFang TC", "Heiti TC", sans-serif`, 'important');
+    const fs = document.getElementById('fs');
+    const pv = document.getElementById('pv');
+    const ui = document.getElementById('ui');
+    function update() {
+        pv.textContent = ui.value || "預覽文字";
+        pv.style.fontFamily = `'${fs.value}', sans-serif`;
     }
-
-    userInput.addEventListener('input', () => {
-        previewBox.textContent = userInput.value || "預覽文字";
-    });
-
-    fontSelect.addEventListener('change', applyFont);
-
-    // 強制在頁面完全載入後刷兩次，專治 Mac 不顯示問題
-    window.addEventListener('load', applyFont);
-    setTimeout(applyFont, 1000);
-    setTimeout(applyFont, 3000);
+    ui.addEventListener('input', update);
+    fs.addEventListener('change', update);
+    window.onload = update;
 </script>
 </body>
 </html>
