@@ -146,6 +146,39 @@
     // 1秒後再跑一次 (預防字體檔下載比較慢)
     setTimeout(syncDefaultFont, 1000);
 </script>
+<div style="text-align: center; margin: 20px 0 40px 0;">
+    <button type="button" onclick="openBearModal()" style="background: none; border: 1px solid #ccc; border-radius: 5px; padding: 5px 15px; color: #666; cursor: pointer; font-size: 13px;">
+        🔍 點我看：印刷文字大小參考
+    </button>
+</div>
 
+<div id="sizeGuideModal" onclick="closeBearModal()" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 10000; backdrop-filter: blur(2px);">
+    <div onclick="event.stopPropagation()" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 85%; max-width: 320px; background: white; padding: 20px; border-radius: 12px; font-family: sans-serif; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+        <h3 style="margin-top: 0; text-align: center; color: #333; font-size: 18px;">📏 印刷大小指南</h3>
+        <div style="font-size: 14px; line-height: 2;">
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee;">
+                <span><b>6 pt</b> (發票小字)</span>
+                <span style="color: #d9534f;">⚠️ 極小</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee;">
+                <span><b>10 pt</b> (報紙內文)</span>
+                <span style="color: #5cb85c;">✅ 清楚</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee;">
+                <span><b>14 pt</b> (10元硬幣字)</span>
+                <span style="color: #0275d8;">⭐ 推薦</span>
+            </div>
+        </div>
+        <div style="background: #fff9db; padding: 10px; border-radius: 8px; font-size: 12px; color: #856404; margin-top: 15px; text-align: center;">
+            💡 拿原子筆尖對著螢幕比對，<br>字比筆尖細就太小了！
+        </div>
+        <button onclick="closeBearModal()" style="width: 100%; margin-top: 15px; padding: 8px; background: #eee; border: none; border-radius: 5px; cursor: pointer;">關閉</button>
+    </div>
+</div>
+
+<script>
+    function openBearModal() { document.getElementById('sizeGuideModal').style.display = 'block'; }
+    function closeBearModal() { document.getElementById('sizeGuideModal').style.display = 'none'; }
+</script>
 </body>
 </html>
