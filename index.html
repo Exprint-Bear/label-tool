@@ -3,67 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>熊愛印標籤字體預視系統</title>
+    <title>熊愛印標籤字體預視</title>
     <style>
-        /* 1. 字體定義：完全對齊您的檔案列表，補 0 並加上版本號 (?v=final) 破除電腦快取 */
-        @font-face { font-family: '01'; src: url('./01.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '02'; src: url('./02.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '03'; src: url('./03.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '04'; src: url('./04.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '05'; src: url('./05.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '06'; src: url('./06.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '07'; src: url('./07.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '08'; src: url('./08.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '09'; src: url('./09.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '10'; src: url('./10.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '11'; src: url('./11.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '12'; src: url('./12.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '13'; src: url('./13.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '14'; src: url('./14.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '15'; src: url('./15.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '16'; src: url('./16.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '17'; src: url('./17.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '18'; src: url('./18.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '19'; src: url('./19.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '20'; src: url('./20.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '21'; src: url('./21.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '22'; src: url('./22.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '23'; src: url('./23.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '24'; src: url('./24.woff2?v=final') format('woff2'); font-display: swap; }
-        @font-face { font-family: '25'; src: url('./25.woff2?v=final') format('woff2'); font-display: swap; }
+        /* 1. 全數加上 ?v=final2026 標籤，這比清空快取更有效 */
+        @font-face { font-family: '01'; src: url('./01.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '02'; src: url('./02.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '03'; src: url('./03.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '04'; src: url('./04.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '05'; src: url('./05.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '06'; src: url('./06.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '07'; src: url('./07.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '08'; src: url('./08.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '09'; src: url('./09.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '10'; src: url('./10.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '11'; src: url('./11.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '12'; src: url('./12.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '13'; src: url('./13.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '14'; src: url('./14.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '15'; src: url('./15.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '16'; src: url('./16.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '17'; src: url('./17.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '18'; src: url('./18.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '19'; src: url('./19.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '20'; src: url('./20.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '21'; src: url('./21.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '22'; src: url('./22.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '23'; src: url('./23.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '24'; src: url('./24.woff2?v=final2026') format('woff2'); font-display: block; }
+        @font-face { font-family: '25'; src: url('./25.woff2?v=final2026') format('woff2'); font-display: block; }
 
-        /* 2. 介面樣式優化 */
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 20px; margin: 0; min-height: 100vh; }
-        .container { width: 100%; max-width: 450px; background: white; padding: 30px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); align-self: flex-start; margin-top: 20px; }
+        body { font-family: -apple-system, sans-serif; display: flex; justify-content: center; background: #f0f2f5; padding: 20px; }
+        .container { width: 100%; max-width: 480px; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         .logo { text-align: center; margin-bottom: 20px; }
-        .logo img { max-width: 130px; height: auto; }
-        h2 { text-align: center; color: #333; margin-bottom: 25px; font-size: 22px; }
-        label { display: block; margin-bottom: 8px; color: #666; font-size: 14px; font-weight: 500; }
-        select, input { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; box-sizing: border-box; outline: none; transition: border 0.2s; }
-        select:focus, input:focus { border-color: #007AFF; }
-        
-        .label-preview {
-            width: 100%; height: 140px; border: 2px dashed #007AFF; border-radius: 12px;
+        .logo img { max-width: 140px; }
+        .label-preview { 
+            width: 100%; height: 140px; border: 2.5px dashed #007AFF; border-radius: 10px;
             display: flex; align-items: center; justify-content: center;
-            margin-bottom: 25px; background-color: #fff;
-            font-size: 38px; color: #222; text-align: center; word-break: break-all; padding: 15px; box-sizing: border-box;
+            font-size: 38px; color: #222; margin-bottom: 25px; text-align: center;
         }
-
-        .footer-note { color: #999; font-size: 12px; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
-        .order-links { text-align: center; font-weight: bold; line-height: 2.5; margin-top: 15px; }
-        .order-links a { color: #aa7700; text-decoration: none; border-bottom: 1px solid #aa7700; }
+        select, input { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; box-sizing: border-box; }
     </style>
 </head>
-
+<body>
 <div class="container">
-    <div class="logo">
-        <img src="https://cdn.store-assets.com/s/1179587/f/16931782.png" alt="熊愛印 Logo">
-    </div>
-    <h2>標籤字體預視系統</h2>
+    <div class="logo"><img src="https://cdn.store-assets.com/s/1179587/f/16931782.png"></div>
+    <h2 style="text-align:center;">標籤字體預視</h2>
     
-    <label>選擇印刷字體：</label>
-    <select id="fontSelect">
-        <option value="01" selected>01 標楷體</option>
+    <label>選擇字體：</label>
+    <select id="fs">
+        <option value="01">01 標楷體</option>
         <option value="02">02 中圓體</option>
         <option value="03">03 少女體</option>
         <option value="04">04 古印體</option>
@@ -90,11 +78,25 @@
         <option value="25">25 竹風體</option>
     </select>
 
-    <div class="label-preview" id="previewBox">預覽文字</div>
+    <div class="label-preview" id="pv">預覽文字</div>
 
-    <label>輸入標籤內容：</label>
-    <input type="text" id="userInput" placeholder="在此輸入您的文字..." maxlength="25">
-    
+    <label>輸入文字：</label>
+    <input type="text" id="ui" placeholder="請在此輸入..." maxlength="20">
+</div>
+
+<script>
+    const fs = document.getElementById('fs'), pv = document.getElementById('pv'), ui = document.getElementById('ui');
+    function update() {
+        pv.textContent = ui.value || "預覽文字";
+        // 加上 !important 強迫 Chrome 執行
+        pv.style.setProperty('font-family', `'${fs.value}', sans-serif`, 'important');
+    }
+    fs.addEventListener('change', update);
+    ui.addEventListener('input', update);
+    window.onload = update;
+</script>
+</body>
+</html>    
     <div class="footer-note">
         <p>※ 效果僅供參考，實際以印刷成品為準。</p>
         <p>※ 選定後請告知編號，請勿僅提供截圖。</p>
